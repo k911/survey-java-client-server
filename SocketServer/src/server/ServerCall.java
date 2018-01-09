@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.sql.Connection;
 import java.util.Collection;
 import java.util.concurrent.Callable;
 
@@ -29,10 +30,11 @@ public class ServerCall implements Callable<String> {
 
     public ServerCall(Socket socket, ConnectionFactory connectionFactory, int connectionId) {
         this.connectionId = connectionId;
-        StatementFactory statementFactory = new SimpleStatementFactory(connectionFactory.make(database));
+        Connection privateConnection = connectionFactory.make(database);
+        StatementFactory statementFactory = new SimpleStatementFactory(privateConnection);
         this.socket = socket;
         this.databaseManager = new MysqlDatabaseManager(statementFactory, database);
-        this.ft = new FutureTaskCallback<>(this);
+        this.ft = new FutureTaskCallback<>(this, privateConnection);
     }
 
     public FutureTaskCallback<String> getFt() {

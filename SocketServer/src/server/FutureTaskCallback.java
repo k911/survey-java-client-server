@@ -1,14 +1,26 @@
 package server;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
 class FutureTaskCallback<T> extends FutureTask<T> {
-    FutureTaskCallback(Callable<T> callable) {
+    private Connection connection;
+
+    FutureTaskCallback(Callable<T> callable, Connection connection) {
         super(callable);
+        this.connection = connection;
     }
 
     public void done() {
+
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            System.err.println("Cannot close MySQL connection");
+        }
+
         String msg = "Result: ";
         if (isCancelled()) {
             msg += "Cancelled.";

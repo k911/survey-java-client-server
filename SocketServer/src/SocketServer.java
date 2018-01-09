@@ -101,6 +101,15 @@ public class SocketServer {
             database.executeUpdate("START TRANSACTION");
             database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('Co to jest AI?', 'sztuczna inteligencja', 'protokół internetowy', 'producent sprzętu komputerowego', 'język programowania', 'a')");
             database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('DNS to:', 'protokół przesyłania plików i folderów', 'poprawna nazwa adresu www', 'specjalny program oferujący usługi sieciowe', 'serwer, który zmienia nazwę domenową na odpowiadający jej numer ip', 'd')");
+            database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('Jednym z pierwszych komputerów był:', 'Telstar', 'RAMAC', 'ENIAC', 'Macintosh', 'c')");
+            database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('Zwierzątkiem widniejącym na logo systemu Linux jest:', 'pingwin', 'tygrys', 'niedźwiedź', 'lew', 'a')");
+            database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('OOP: Co należy preferować ponad dziedziczenie?', 'interpolacje', 'kompozycje', 'serializacje', 'abstrakcje', 'b')");
+            database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('Który z języków nie jest statycznie typowany?', 'Java', 'C/C++', 'C#', 'Ruby', 'd')");
+            database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('Która z wymienionych pamięci jest nieulotna i kasowana prądem elektrycznym?', 'EPROM', 'EEPROM', 'RAM', 'ROM', 'b')");
+            database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('Który system plików jest najczęściej wykorzystywany w dystrybucjach systemu Linux?', 'ISO 9660', 'NTFS', 'EXT3', 'HFS+', 'c')");
+            database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('W adresie strony rządowej, domeną najwyższego poziomu jest skrót:', '.com.pl', '.pl', '.gov', '.com', 'c')");
+            database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('Złośliwym oprogramowaniem, zawierającym funkcję wyświetlającą reklamy jest:', 'koń trojański', 'rootkit', 'keylogger', 'adware', 'd')");
+            database.executeUpdate("INSERT INTO `questions` (`question`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct`) VALUES ('Najpotężniejszym komputerem w Polsce jest:', 'Zeus', 'Tryton', 'Prometeusz', 'Herkules', 'c')");
             database.executeUpdate("COMMIT");
         } catch (Throwable e) {
             database.executeUpdate("ROLLBACK");

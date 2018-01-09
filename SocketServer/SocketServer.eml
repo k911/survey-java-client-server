@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true" jdk="1.8" jdk_type="JavaSDK">
+	<output-test url="file://$MODULE_DIR$/output/test/SocketServer"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="mysql-connector-java-5.1.45-bin" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/SocketServer/mysql-connector-java-5.1.45-bin.jar!/"/>
+	</lib>
+</component>
