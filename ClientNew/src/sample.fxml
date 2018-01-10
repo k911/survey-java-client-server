@@ -17,7 +17,7 @@
                      <TextField fx:id="nameText" layoutX="300.0" prefHeight="41.0" text="Name" />
                   </children>
                </Pane>
-            <Label alignment="CENTER" layoutX="20.0" layoutY="10.0" prefHeight="77.0" style="-fx-border-color: ffab00;" text="Fill the Survey, Please!" textFill="#5e24ff">
+            <Label alignment="CENTER" layoutX="20.0" layoutY="10.0" prefHeight="77.0" style="-fx-border-color: ffab00;" text="Quiz Game!" textFill="#5e24ff">
                <font>
                   <Font name="Purisa" size="48.0" />
                </font>

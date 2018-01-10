@@ -21,7 +21,7 @@ public class SocketServer {
         MysqlDatabaseManager databaseManager = new MysqlDatabaseManager(statementFactory, database);
 
         boolean debug = true;
-        if (!databaseManager.exists() || debug) {
+        if (debug || !databaseManager.exists()) {
             if (databaseManager.exists()) {
                 databaseManager.drop();
                 System.out.println("Database successfully dropped.");
